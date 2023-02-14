@@ -18,13 +18,14 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red,
         ),
-        body: Column(
+        body: SingleChildScrollView(child: 
+         Column(
           children: [
             _buildBody(),
           ],
         ),
       ),
-    );
+    ),);
   }
 }
 
@@ -216,7 +217,7 @@ Widget _bottomDetail() {
     child: ListView.builder(
         padding: const EdgeInsets.all(7.0),
         scrollDirection: Axis.horizontal,
-        itemExtent: 200,
+        itemExtent: 190,
         itemCount: days.length,
         itemBuilder: (context, index) {
           return Card(
@@ -229,7 +230,7 @@ Widget _bottomDetail() {
                     days[index],
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 27,
+                      fontSize: 25,
                     ),
                   ),
                 ],
